@@ -1,28 +1,27 @@
-import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
+import React, {useContext} from "react";
+import{View,ActivityIndicator} from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AutenticacaoContexto from '../Contexts/contextoAutenticacao';
 
-import TelaLogin from '../Componente/Tela/Login/index.js';
-import TelaTipoUsuario from '../Componente/Tela/TipoUsuario/index.js';
+import RotaApp from "./rotasApp.js";
+import RotaAutenticacao from "./rotasAutorizacao.js";
 
 const Stack = createNativeStackNavigator()
 
 export default function Rotas(){
 
-    return(
-        <NavigationContainer>
-           <Stack.Navigator  >
-            <Stack.Screen
-              name="TelaLogin" component={TelaLogin}
-            />
-            <Stack.Screen
-              name="TelaTipoUsuario" component={TelaTipoUsuario}
-            />
-           </Stack.Navigator>
-          
-          
-          
-        </NavigationContainer>
-    
-      );
+    const {logado, carregando} = useContext(AutenticacaoContexto)
+    // if(carregando){
+    //     return(
+    //         <View style={{ flex:3, justifyContent:'center', alignItems:'center' }}>
+    //             <ActivityIndicator size='large' color='#999'/>
+    //         </View>
+    //     )
+    // }
+
+    if(logado == true){
+        return(<RotaApp/>)
+    }else {
+        return(<RotaAutenticacao/>)
+    } ;
 }

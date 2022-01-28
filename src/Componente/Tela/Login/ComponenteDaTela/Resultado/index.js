@@ -3,10 +3,12 @@ import { Text, View } from "react-native";
 
 export default function ResultadoLogin(props){
    return( 
-        <View> 
+        
+     
+
+                <Text>{props.mensagemResultado}</Text>
+        
             
-            <Text>{props.mensagemResultado}</Text>
-            
-        </View>
+        
    )
 }

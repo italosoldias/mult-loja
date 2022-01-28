@@ -1,10 +1,27 @@
-import React from "react";
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import * as React from 'react';
+import { StyleSheet, Text, View, TextInput, Button,TouchableOpacity } from 'react-native';
+import BotaoTelaVenda from './ComponenteDaTela/BotaoTelaVenda/index.js'
+import BotaoTelaEstoque from './ComponenteDaTela/BotaoTelaEstoque/index.js'
+import TelaUsuarioVendedor from '../TelaUsuarioVendedor/index.js'
+// import staleTelaLogin from '../Login/styles.js'
+import staleTelaTipoUsuario from './styles.js'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function TelaTipoUsuario() {
+
+
+export default function TelaTipoUsuario({ navigation }) {
+    
+    const navega = navigation
+
     return (
-    <Button
-        //onPress={()=> {validaDados()}}
-        title='confirmar'
-    />  )
+        <View style = {staleTelaTipoUsuario.sTelaTipoUsuarioContainer}>
+          
+            <Text style={staleTelaTipoUsuario.sTelaTipoUsuarioTexto}>SELECIONE O TIPO   DO USUARIO</Text>
+            {/* <Text style={{marginBottom:20} , staleTelaTipoUsuario.sTelaTipoUsuarioTexto } > DO USUARIO </Text> */}
+            <BotaoTelaVenda   > </BotaoTelaVenda>
+
+             <BotaoTelaEstoque  ></BotaoTelaEstoque>
+        </View>
+    )
 }
