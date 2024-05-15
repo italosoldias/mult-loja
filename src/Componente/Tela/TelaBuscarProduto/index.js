@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button,SafeAreaView, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button,SafeAreaView, Pressable} from 'react-native';
 //import { SafeAreaView } from "react-native-web";
 import BuscarProduto from "./ComponenteDaTela/BuscarProduto/index.js";
 

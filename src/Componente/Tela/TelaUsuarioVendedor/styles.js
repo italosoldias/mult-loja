@@ -55,8 +55,8 @@ const {height,width} = Dimensions.get('window')
         fontSize:40,
         marginBottom:20,
         textAlign: "center",
-        textShadowColor:'#000000',
-        textShadowRadius:5
+        textShadow:'#000000',
+        
     }
 })
 

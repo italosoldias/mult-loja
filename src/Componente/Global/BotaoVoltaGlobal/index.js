@@ -1,6 +1,6 @@
 import React from "react";
 import Icone from 'react-native-vector-icons/MaterialIcons'
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Pressable} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import sBotaoGlobal from './styles.js'
 export default function BotaoVoltaGlobal (){
@@ -15,11 +15,11 @@ export default function BotaoVoltaGlobal (){
 
         <View style={sBotaoGlobal.sBotaoGlobalView}>
 
-        <TouchableOpacity 
+        <Pressable 
             onPress={()=>{voltarTela()}}
             style={sBotaoGlobal.sBotaoGlobalBotao}>
         <Icone style={sBotaoGlobal.sBotaoGlobalIcone} name='keyboard-backspace' />
-        </TouchableOpacity>
+        </Pressable>
         </View>
     )
 

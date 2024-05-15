@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Pressable} from 'react-native';
 import staleTelaLogin from '../Login/styles.js'
 import ViewTelaLeitorCodigo from './ComponenteDaTela/VIewCamera/index.js'
 import BotaoDigitarCodigo from './ComponenteDaTela/BotaoDigitaCodigoBarras/index.js'

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Pressable} from 'react-native';
 import TelaLogin from "../../../Login";
 import staleTelaTipoUsuario from '../../styles.js'
 
@@ -24,13 +24,13 @@ export default function BotaoTelaVenda( props) {
     
     
     
-    <TouchableOpacity 
+    <Pressable 
         style={staleTelaTipoUsuario.sTelaTipoUsuarioBotao}
         onPress={  () => {renderTelaVenda()}      }
         > 
            
         <Text style={staleTelaTipoUsuario.sTelaTipoUsuarioTextoBotao}> USUARIO VEMDEDOR </Text>
-    </TouchableOpacity>
+    </Pressable>
         
         )
 }

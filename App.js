@@ -16,7 +16,7 @@ import {AtenticacaoProvedor} from './src/Contexts/contextoAutenticacao.js';
 export default function App() {
  
   return (
-      <NavigationContainer>
+      <NavigationContainer independent={true} >
         <AtenticacaoProvedor >
 
             <Rotas/>

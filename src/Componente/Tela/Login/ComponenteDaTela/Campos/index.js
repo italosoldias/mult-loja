@@ -1,5 +1,5 @@
 import React, { useEffect, useState , useContext} from 'react';
-import { StyleSheet, Text, View, TextInput, Button,Dimensions,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button,Dimensions,Pressable } from 'react-native';
 import ResultadoLogin from '../Resultado/index.js';
 import AtenticacaoProvedor from '../../../../../Contexts/contextoAutenticacao.js';
 
@@ -27,6 +27,7 @@ export default function CamposLogin(){
            
         const aq = await aut(dadosAutenticacao)
            
+
         
     }
 
@@ -50,23 +51,23 @@ export default function CamposLogin(){
             <TextInput
                 style={staleTelaLogin.sTelaLogincampos}
                 onChangeText={setEmail}
-                value={email}
+                value={email=== null ? '' :email}
                 placeholder='INFORME SEU E-MAIL'
-                keyboardType='email-address'
+                inputMode='email-address'
                 />
             <TextInput
                 style={staleTelaLogin.sTelaLogincampos}
                 onChangeText={setSenha}
-                value={senha}
+                value={senha=== null ? '' :senha}
                 placeholder='DIGITE SUA SENHA'
                 secureTextEntry= {true}
                 />
             </View>
-            <TouchableOpacity  style={staleTelaLogin.sTelaLoginBotao} 
+            <Pressable  style={staleTelaLogin.sTelaLoginBotao} 
                 onPress={()=> {validaDados()}} 
             >
                 <Text style={staleTelaLogin.sTelaLoginTextoBotao}>CONFIRMAR</Text>
-            </TouchableOpacity>
+            </Pressable>
              
              <ResultadoLogin mensagemResultado={mensagem} />
            

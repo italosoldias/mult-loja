@@ -1,5 +1,5 @@
 import React, {  useState , useContext} from 'react';
-import { StyleSheet, Text, View, TextInput, Button,Dimensions,TouchableOpacity, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button,Dimensions,Pressable, SafeAreaView } from 'react-native';
 import api,{ getProduto } from '../../../../../services/Api';
 import staleTelaBuscaProduto from '../../styles';
 
@@ -31,16 +31,16 @@ async function buscarProdutoApi(){
                 style={staleTelaBuscaProduto.sTelaBuscaProdutoCampos}
                 onChangeText={setcodigoDeBarrasEscrito}
                 value={codigoDeBarrasEscrito}
-                keyboardType='numeric'
+                inputMode='numeric'
             />
-            <TouchableOpacity 
+            <Pressable 
                 style={staleTelaBuscaProduto.sTelaBuscaProdutoBotao} 
                 onPress={()=>{buscarProdutoApi()}}
             >
                 <Text 
                     style={staleTelaBuscaProduto.sTelaBuscaProdutoTextoBotao}>BUSCAR
                 </Text>
-            </TouchableOpacity>
+            </Pressable>
         </SafeAreaView>
     )
 }

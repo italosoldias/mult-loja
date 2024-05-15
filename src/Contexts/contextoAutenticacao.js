@@ -1,6 +1,7 @@
 //import { UserInterfaceIdiom } from "expo-constants";
-import React, { createContext, useState , useCallback, useEffect} from "react";
-import AsyncStorege from '@react-native-async-storage/async-storage';
+import React, { createContext, useState, useCallback, useEffect} from "react";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 //import api from "../services/Api.js";
 import api, {getAutenticacao} from '../services/Api.js'
 
@@ -35,8 +36,8 @@ export  const  AtenticacaoProvedor = ({ children }) => {
   useEffect(()=>{
     async function carregandoInformaçõesUsuario(){
 
-    const informacaoUsuario =  await AsyncStorege.getItem('@mult-loja:usuario')
-    const informacaoToken =  await AsyncStorege.getItem('@mult-loja:token')
+    const informacaoUsuario =  await AsyncStorage.getItem('@mult-loja:usuario')
+    const informacaoToken =  await AsyncStorage.getItem('@mult-loja:token')
 
     if (informacaoUsuario && informacaoToken){
       api.defaults.headers.token = `Bearer ${informacaoToken}`
@@ -60,8 +61,8 @@ export  const  AtenticacaoProvedor = ({ children }) => {
     console.log('====================================')
     console.log(token)
         setUsuario(autenticUsuario)
-    await   AsyncStorege.setItem('@mult-loja:usuario', JSON.stringify(autenticUsuario))
-    await AsyncStorege.setItem('@mult-loja:token', token)
+    await   AsyncStorage.setItem('@mult-loja:usuario', JSON.stringify(autenticUsuario))
+    await AsyncStorage.setItem('@mult-loja:token', token)
        
   }
  

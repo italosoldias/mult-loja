@@ -1,10 +1,10 @@
 
 import axios from 'axios';
 
-import AsyncStorege from '@react-native-async-storage/async-storage';
+
 
 const api = axios.create({
-    baseURL: "http://192.168.1.2:3000"
+    baseURL: "http://192.168.1.23:8090/"
 })
 //192.168.1.14
 export async function   getAutenticacao(body){

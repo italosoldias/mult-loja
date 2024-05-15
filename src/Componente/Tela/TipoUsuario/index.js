@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, Button,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button,Pressable } from 'react-native';
 import BotaoTelaVenda from './ComponenteDaTela/BotaoTelaVenda/index.js'
 import BotaoTelaEstoque from './ComponenteDaTela/BotaoTelaEstoque/index.js'
+import BotaoTelaCadastroAnimal from './ComponenteDaTela/BotaoTelaCadastroAnimal'
 import TelaUsuarioVendedor from '../TelaUsuarioVendedor/index.js'
 // import staleTelaLogin from '../Login/styles.js'
 import staleTelaTipoUsuario from './styles.js'
@@ -22,6 +23,8 @@ export default function TelaTipoUsuario({ navigation }) {
             <BotaoTelaVenda   > </BotaoTelaVenda>
 
              <BotaoTelaEstoque  ></BotaoTelaEstoque>
+
+             <BotaoTelaCadastroAnimal></BotaoTelaCadastroAnimal>
         </View>
     )
 }
