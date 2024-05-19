@@ -12,8 +12,9 @@ export default function TelaCadastrarAnimal() {
         
         
         <View style={staleTelaCadastraAnimal.sTelaCadastraAnimalContainer}>
-              <BotaoVoltaGlobal/>
+              
                 <Text style={staleTelaCadastraAnimal.sTelaCadastraAnimalTexto}> INFORME OS DADOS DO ANIMAL</Text> 
+                <BotaoVoltaGlobal/>
               <CadastrarAnimal/>
         </View>
 

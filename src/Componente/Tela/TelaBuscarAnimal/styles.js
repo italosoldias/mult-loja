@@ -3,17 +3,18 @@ import {StyleSheet ,Dimensions} from 'react-native';
 
 
 const {height,width} = Dimensions.get('window')
- const  staleTelaCadastraTutor = StyleSheet.create({
+ const  staleTelaBuscaAnimal = StyleSheet.create({
     
-    staleTelaCadastraTutorContainer:{
+    sTelaBuscaAnimalContainer:{
         paddingTop: 50,
+        
         alignItems: "center",
         
         // backgroundColor:"#4E4B4B",
        // 4E4B4B",
         
     },
-    staleTelaCadastraTutorCampos: {
+    sTelaBuscaAnimalCampos: {
         
         width:  width * 0.95 / 1,
         margin:5,
@@ -25,7 +26,7 @@ const {height,width} = Dimensions.get('window')
         backgroundColor: "#FFFFFF",
         
     },
-    staleTelaCadastraTutorBotao:{
+    sTelaBuscaAnimalBotao:{
         alignItems: "center",
         
         marginBottom:10,
@@ -36,19 +37,24 @@ const {height,width} = Dimensions.get('window')
         borderWidth: 1,
        
     },
-    staleTelaCadastraTutorTextoBotao:{
+    sTelaBuscaAnimalTextoBotao:{
         color: "#005",
         fontSize:25,
         
     },
-    staleTelaCadastraTutorTexto:{
+    sTelaBuscaAnimalTexto:{
         color:"#E9DDDD",
         fontSize:40,
-        marginBottom:20,
+        paddingTop:50 ,
         textAlign: "center",
         textShadow:'#000000',
         
+    },
+    sTelaBuscaAnimalComboBox:{
+        height:height* 0.041 / 1 ,
+        width: width * 0.90 / 1,
+        backgroundColor:"#DCDCDC"
     }
 })
 
-export default staleTelaCadastraTutor
+export default staleTelaBuscaAnimal

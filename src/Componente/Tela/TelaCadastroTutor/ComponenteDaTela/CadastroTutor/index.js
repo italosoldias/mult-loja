@@ -1,7 +1,7 @@
 import React, {  useState , useContext} from 'react';
 import { StyleSheet, Text, View, TextInput, Button,Dimensions,Pressable, SafeAreaView } from 'react-native';
 import api,{ postCadastrarTutor } from '../../../../../services/Api.js';
-import staleTelaCadastraAnimal from '../../styles.js'
+import staleTelaCadastraTutor from '../../styles.js'
 
 export default function CadastrarTutor(){
 
@@ -33,10 +33,10 @@ async function cadastrarAnnimalApi(){
 
 
     return (
-        <SafeAreaView style={staleTelaCadastraAnimal.sTelaCadastraAnimalContainer}>
+        <SafeAreaView style={staleTelaCadastraTutor.staleTelaCadastraTutorContainer}>
 
             <TextInput 
-                style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
+                style={staleTelaCadastraTutor.staleTelaCadastraTutorCampos}
                 onChangeText={setNomeTutorEscrito}
                 value={ nomeTutorEscrito=== null ? '' :nomeTutorEscrito}
                 inputMode='text'
@@ -44,14 +44,14 @@ async function cadastrarAnnimalApi(){
             />
             
             <TextInput 
-                style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
+                style={staleTelaCadastraTutor.staleTelaCadastraTutorCampos}
                 onChangeText={setEmailEscrito}
                 value={emailEscrito === null ? '' :emailEscrito}
                 inputMode='email'
                 placeholder='INFORME O EMAIL'
             />
             <TextInput 
-                style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
+                style={staleTelaCadastraTutor.staleTelaCadastraTutorCampos}
                 onChangeText={setIdTutorEscrito}
                 value={idTutorEscrito === null ? '' :idTutorEscrito}
                 inputMode='numeric'
@@ -60,11 +60,11 @@ async function cadastrarAnnimalApi(){
           
             
             <Pressable 
-                style={staleTelaCadastraAnimal.sTelaCadastraAnimalBotao} 
+                style={staleTelaCadastraTutor    .staleTelaCadastraTutorBotao} 
                 onPress={()=>{cadastrarAnnimalApi()}}
             >
                 <Text 
-                    style={staleTelaCadastraAnimal.sTelaCadastraAnimalTextoBotao}>CADASTRAR</Text>
+                    style={staleTelaCadastraTutor    .staleTelaCadastraTutorTextoBotao}>CADASTRAR</Text>
             </Pressable>
         </SafeAreaView>
     )
