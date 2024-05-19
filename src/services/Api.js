@@ -21,5 +21,10 @@ export async function getProduto(body){
     return res.data
 }
 
+export async function   postCadastrarAnimal(body){
+    const res = await api.post('/animal', body)
+    
+     return res.data
+ } 
 
 export default api
