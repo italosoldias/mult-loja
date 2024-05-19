@@ -33,6 +33,7 @@ export  const  AtenticacaoProvedor = ({ children }) => {
   const [ usuario, setUsuario] = useState( null)
   const [carregando, setCarregando ] = useState(true)
 
+  
   useEffect(()=>{
     async function carregandoInformaçõesUsuario(){
 

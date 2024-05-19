@@ -1,20 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, View, TextInput, Button,SafeAreaView, Pressable} from 'react-native';
-import BotaoVoltaGlobal from '../../Global/BotaoVoltaGlobal/index'
 //import { SafeAreaView } from "react-native-web";
-import CadastrarAnimal from './ComponenteDaTela/CadastroAnimal/index.js'
+import CadastrarTutor from './ComponenteDaTela/CadastroTutor/index.js'
 
 import staleTelaCadastraAnimal from "./styles.js";
 
 // style={staleTelaLogin.sTelaLoginBotao}
-export default function TelaCadastrarAnimal() {
+export default function TelaCadastrarTutor() {
     return (
         
         
         <View style={staleTelaCadastraAnimal.sTelaCadastraAnimalContainer}>
-              <BotaoVoltaGlobal/>
-                <Text style={staleTelaCadastraAnimal.sTelaCadastraAnimalTexto}> INFORME OS DADOS DO ANIMAL</Text> 
-              <CadastrarAnimal/>
+                <Text style={staleTelaCadastraAnimal.sTelaCadastraAnimalTexto}> INFORME OS DADOS DO TUTOR</Text> 
+              <CadastrarTutor/>
         </View>
 
         
