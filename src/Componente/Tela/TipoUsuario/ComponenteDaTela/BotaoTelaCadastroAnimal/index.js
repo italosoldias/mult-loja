@@ -7,7 +7,7 @@ import { NavigationContainer , useNavigation} from '@react-navigation/native';
 export default function BotaoTelaCadastroAnimal() {
     const navegation = useNavigation()
     function renderTelaEstoque (){
-        navegation.navigate('TelaUsuarioVendedor')
+        navegation.navigate('TelaCadastrarAnimal')
     }
 
     return (

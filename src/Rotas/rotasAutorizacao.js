@@ -15,7 +15,7 @@ export default function RotaAutenticacao () {
   }}>
         <AutorizacaoStack.Screen
               options={{
-                contentStyle :{backgroundColor : "#4E4B4B"}
+                contentStyle :{backgroundColor : "#6B8E23"}
             }}
               name="TelaLogin" component={TelaLogin}
             />

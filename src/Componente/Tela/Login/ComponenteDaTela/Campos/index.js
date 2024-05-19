@@ -1,9 +1,11 @@
 import React, { useEffect, useState , useContext} from 'react';
-import { StyleSheet, Text, View, TextInput, Button,Dimensions,Pressable } from 'react-native';
+import { StyleSheet ,Text, View, TextInput,Dimensions,Pressable } from 'react-native';
 import ResultadoLogin from '../Resultado/index.js';
+import BotaoConfirmaLogin from '../BotaoConfirmarLigin/index.js'
 import AtenticacaoProvedor from '../../../../../Contexts/contextoAutenticacao.js';
 
 import staleTelaLogin from '../../styles.js'
+
 // import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 //import ClassAutenticacaoContexDate from '../../../../../Contexts/ClassAutenticacaoContexDate.js';
@@ -63,11 +65,10 @@ export default function CamposLogin(){
                 secureTextEntry= {true}
                 />
             </View>
-            <Pressable  style={staleTelaLogin.sTelaLoginBotao} 
-                onPress={()=> {validaDados()}} 
-            >
-                <Text style={staleTelaLogin.sTelaLoginTextoBotao}>CONFIRMAR</Text>
-            </Pressable>
+            
+            <BotaoConfirmaLogin onPress={validaDados}/>
+
+            
              
              <ResultadoLogin mensagemResultado={mensagem} />
            
