@@ -5,6 +5,7 @@ import BotaoTelaEstoque from './ComponenteDaTela/BotaoTelaEstoque/index.js'
 import BotaoTelaCadastroAnimal from './ComponenteDaTela/BotaoTelaCadastroAnimal'
 import TelaUsuarioVendedor from '../TelaUsuarioVendedor/index.js'
 import BotaorTelaCadastraTutor from './ComponenteDaTela/BotaoTelaCadastroTutor'
+import BotaoTelaBuscarAnimal from './ComponenteDaTela/BotaoTelaBuscarAnimal'
 // import staleTelaLogin from '../Login/styles.js'
 import staleTelaTipoUsuario from './styles.js'
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,7 +25,7 @@ export default function TelaTipoUsuario({ navigation }) {
             <BotaoTelaVenda   > </BotaoTelaVenda>
 
              <BotaoTelaEstoque  ></BotaoTelaEstoque>
-
+             <BotaoTelaBuscarAnimal></BotaoTelaBuscarAnimal>
              <BotaoTelaCadastroAnimal></BotaoTelaCadastroAnimal>
              <BotaorTelaCadastraTutor></BotaorTelaCadastraTutor>
         </View>
