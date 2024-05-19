@@ -4,6 +4,7 @@ import TelaUsuarioVendedor from "../Componente/Tela/TelaUsuarioVendedor"
 import TelaUsuarioAdministrador from "../Componente/Tela/TelaUsuarioAdministrador"
 import TelaBuscarProduto from "../Componente/Tela/TelaBuscarProduto"
 import TelaCadastrarAnimal from '../Componente/Tela/TelaCadastrarAnimal'
+import TelaCadastrarTutor from '../Componente/Tela/TelaCadastroTutor'
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -31,6 +32,9 @@ const RotaApp = () => (
         />
         <AppStack.Screen
             name="TelaCadastrarAnimal" component={TelaCadastrarAnimal}
+        />
+        <AppStack.Screen
+            name="TelaCadastrarTutor" component={TelaCadastrarTutor}
         />
     </AppStack.Navigator>
 );

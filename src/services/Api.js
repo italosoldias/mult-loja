@@ -27,4 +27,10 @@ export async function   postCadastrarAnimal(body){
      return res.data
  } 
 
+export async function postCadastrarTutor(body){
+    const res = await api.post('/tutor', body)
+    
+     return res.data
+}
+
 export default api

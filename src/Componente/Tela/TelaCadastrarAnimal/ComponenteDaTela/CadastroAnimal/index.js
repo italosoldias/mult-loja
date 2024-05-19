@@ -43,14 +43,14 @@ async function cadastrarAnnimalApi(){
             <TextInput 
                 style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
                 onChangeText={setNomeAnimalEscrito}
-                value={nomeAnimalEscrito}
+                value={ nomeAnimalEscrito=== null ? '' :nomeAnimalEscrito}
                 inputMode='text'
                 placeholder='INFORME O NOME DO ANIMAL'
             />
             <TextInput 
                 style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
                 onChangeText={setRacaEscrita}
-                value={racaEscrita}
+                value={racaEscrita === null ? '' :racaEscrita}
                 inputMode='text'
                 placeholder='INFORME A RAÇA DO ANIMAL'
             />
@@ -58,28 +58,28 @@ async function cadastrarAnnimalApi(){
             <TextInput 
                 style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
                 onChangeText={setEspecieEscrita}
-                value={especieEscrita}
+                value={especieEscrita === null ? '' :especieEscrita}
                 inputMode='text'
                 placeholder='INFORME A ESPECIE DO ANIMAL'
             />
             <TextInput 
                 style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
                 onChangeText={setIdTutorEscrito}
-                value={idTutorEscrito}
+                value={idTutorEscrito === null ? '' :idTutorEscrito}
                 inputMode='numeric'
                 placeholder='INFORME O CPF DO TUTOR'
             />
             <TextInput 
                 style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
                 onChangeText={setIdAnimalEscrito}
-                value={idAnimalEscrito}
+                value={idAnimalEscrito === null ? '' :idAnimalEscrito}
                 inputMode='numeric'
                 placeholder='INFORME A IDENTIDADE DO ANIMAL'
             />
             <TextInput 
                 style={staleTelaCadastraAnimal.sTelaCadastraAnimalCampos}
                 onChangeText={setPesoEscrito}
-                value={pesoEscrito}
+                value={pesoEscrito=== null ? '' :pesoEscrito}
                 inputMode='decimal'
                 placeholder='INFORME O PESO DO ANIMAL'
             />
@@ -88,8 +88,7 @@ async function cadastrarAnnimalApi(){
                 onPress={()=>{cadastrarAnnimalApi()}}
             >
                 <Text 
-                    style={staleTelaCadastraAnimal.sTelaCadastraAnimalTextoBotao}>BUSCAR
-                </Text>
+                    style={staleTelaCadastraAnimal.sTelaCadastraAnimalTextoBotao}>CADASTRAR</Text>
             </Pressable>
         </SafeAreaView>
     )
