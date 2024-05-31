@@ -1,4 +1,4 @@
-import React, {  useState , useContext} from 'react';
+import React, {  useState , useContext, useEffect} from 'react';
 import {  Text, Image ,View, TextInput, Button,Dimensions,Pressable, SafeAreaView } from 'react-native';
 import { useRoute } from '@react-navigation/native'
 import staleTelaAnimalRetornado from '../../styles'
@@ -6,7 +6,8 @@ export default function DadosAnimal(params) {
     const route = useRoute()
     
     const { data } = route.params;
-    console.log(data.imagem)
+    
+    
     return(
         <SafeAreaView style={staleTelaAnimalRetornado.sTelaAnimalRetornadoView}>
             <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>Nome do animal: {data.nomeAnimal}</Text>
@@ -16,7 +17,7 @@ export default function DadosAnimal(params) {
             <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>Peso do Animal: {data.peso}</Text>
             <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>Especie do Animal: {data.especie}</Text>
             {data.imagem != undefined ? <Image 
-            source={{ uri: `data:image/png;base64,${data.imagem}`, base64: true }}
+            source={{ uri: data.imagem, base64: true }}
             style={{ width: 200, height: 200 }}
             /> 
             : <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>SEM IMAGEM </Text> }

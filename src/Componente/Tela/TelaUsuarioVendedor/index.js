@@ -11,7 +11,7 @@ export default function TelaUsuarioVendedor() {
         
         <View style={staleTelaUsuarioVendedor.sTelaUsuarioVendedorContainer}>
               
-              <BotaoVoltaGlobal/>
+              {/* <BotaoVoltaGlobal/> */}
                <ViewTelaLeitorCodigo/> 
 
                 <BotaoDigitarCodigo/>

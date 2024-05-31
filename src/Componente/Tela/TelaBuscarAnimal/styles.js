@@ -6,7 +6,7 @@ const {height,width} = Dimensions.get('window')
  const  staleTelaBuscaAnimal = StyleSheet.create({
     
     sTelaBuscaAnimalContainer:{
-        paddingTop: 50,
+        
         
         alignItems: "center",
         

@@ -12,10 +12,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const AppStack = createNativeStackNavigator()
 
 const RotaApp = () => (
-    <AppStack.Navigator screenOptions={{
-        headerShown: false,
-        contentStyle :{backgroundColor : "#6B8E23"}
-    }} >
+    <AppStack.Navigator  >
         <AppStack.Screen 
             // options={{
             //     contentStyle :{backgroundColor : "#4E4B4B"}

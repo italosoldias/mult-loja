@@ -27,7 +27,7 @@ async function buscarProdutoApi(){
     return (
         <SafeAreaView style={staleTelaBuscaProduto.sTelaBuscaProdutoContainer}>
 
-            <TextInput 
+            <CampoPadrao 
                 style={staleTelaBuscaProduto.sTelaBuscaProdutoCampos}
                 onChangeText={setcodigoDeBarrasEscrito}
                 value={codigoDeBarrasEscrito}

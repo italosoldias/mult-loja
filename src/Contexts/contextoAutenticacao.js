@@ -62,12 +62,12 @@ export  const  AtenticacaoProvedor = ({ children }) => {
     console.log('====================================')
     console.log(token)
         setUsuario(autenticUsuario)
+    
     await   AsyncStorage.setItem('@mult-loja:usuario', JSON.stringify(autenticUsuario))
     await AsyncStorage.setItem('@mult-loja:token', token)
        
   }
  
-  
   // nao e necessario criar todo um objeto para incorporar ao provedor de contexto nem colocar toda a tipagem
   // basta espor o nome do que deve ser repassado para o contexto
     return(

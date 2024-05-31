@@ -2,6 +2,8 @@ import React, { useEffect, useState , useContext} from 'react';
 import { StyleSheet,TouchableOpacity ,Text, View, TextInput,Dimensions,Pressable } from 'react-native';
 import ResultadoLogin from '../Resultado/index.js';
 // import BotaoConfirmaLogin from '../BotaoConfirmarLigin/index.js'
+import BotaoPadrao from "../../../../Global/BotaoPadrao/index.js";
+import CampoPadrao from "../../../../Global/CampoPadrao/index.js"
 import AtenticacaoProvedor from '../../../../../Contexts/contextoAutenticacao.js';
 
 import staleTelaLogin from '../../styles.js'
@@ -56,14 +58,14 @@ function ok(){
          <View style={staleTelaLogin.sTelaLogincontainer}>
 
         <View  >
-            <TextInput
+            <CampoPadrao
                 style={staleTelaLogin.sTelaLogincampos}
                 onChangeText={setEmail}
                 value={email=== null ? '' :email}
                 placeholder='INFORME SEU E-MAIL'
                 inputMode='email-address'
                 />
-            <TextInput
+            <CampoPadrao
                 style={staleTelaLogin.sTelaLogincampos}
                 onChangeText={setSenha}
                 value={senha=== null ? '' :senha}
@@ -71,10 +73,9 @@ function ok(){
                 secureTextEntry= {true}
                 />
             </View>
-            <Pressable   onPress={()=>validaDados()}style={staleTelaLogin.sTelaLoginBotao}>
+            <BotaoPadrao  texto={"Confirmar"} roda={validaDados}/>
         
-    <Text style={staleTelaLogin.sTelaLoginTextoBotao}>CONFIRMAR</Text>
-    </Pressable>
+    
             
 
             

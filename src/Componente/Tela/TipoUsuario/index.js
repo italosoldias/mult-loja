@@ -1,33 +1,58 @@
-import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, Button,Pressable } from 'react-native';
-import BotaoTelaVenda from './ComponenteDaTela/BotaoTelaVenda/index.js'
-import BotaoTelaEstoque from './ComponenteDaTela/BotaoTelaEstoque/index.js'
-import BotaoTelaCadastroAnimal from './ComponenteDaTela/BotaoTelaCadastroAnimal'
-import TelaUsuarioVendedor from '../TelaUsuarioVendedor/index.js'
-import BotaorTelaCadastraTutor from './ComponenteDaTela/BotaoTelaCadastroTutor'
-import BotaoTelaBuscarAnimal from './ComponenteDaTela/BotaoTelaBuscarAnimal'
-// import staleTelaLogin from '../Login/styles.js'
-import staleTelaTipoUsuario from './styles.js'
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import sFundoGlobal from "../../Global/FundoGlobal/styles.js";
+
+
+const TelaTipoUsuario = ({ name, photoUrl }) => {
+  return (
+    <View style={sFundoGlobal.sBackColor}>
+      {/* Round Avatar */}
+      <View style={styles.avatarContainer}>
+        <Image
+          source={{ uri: "C:/dev/mult-loja/assets/icon.png" }}
+          style={styles.avatarImage}
+        />
+      </View>
+
+      <View style={styles.userNameContainer}>
+        <Text style={styles.userName}>nomezinho</Text>
+      </View>
+     
+    </View>
+   
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  avatarContainer: {
+    width: 150,
+    height: 150,
+    borderRadius: 150 / 2,
+    overflow: 'hidden',
+    backgroundColor: '#ccc',
+    marginTop: 50, // Adjust margin-top for desired spacing
+    alignSelf: 'center', // Center avatar horizontally
+  },
+  avatarImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
+  userNameContainer: {
+    marginTop: 20, // Adjust margin-top for spacing between avatar and name
+    alignItems: 'center',
+  },
+  userName: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+});
 
 
 
-export default function TelaTipoUsuario({ navigation }) {
-    
-    const navega = navigation
-
-    return (
-        <View style = {staleTelaTipoUsuario.sTelaTipoUsuarioContainer}>
-          
-            <Text style={staleTelaTipoUsuario.sTelaTipoUsuarioTexto}>SELECIONE O TIPO   DO USUARIO</Text>
-            {/* <Text style={{marginBottom:20} , staleTelaTipoUsuario.sTelaTipoUsuarioTexto } > DO USUARIO </Text> */}
-            <BotaoTelaVenda   > </BotaoTelaVenda>
-
-             <BotaoTelaEstoque  ></BotaoTelaEstoque>
-             <BotaoTelaBuscarAnimal></BotaoTelaBuscarAnimal>
-             <BotaoTelaCadastroAnimal></BotaoTelaCadastroAnimal>
-             <BotaorTelaCadastraTutor></BotaorTelaCadastraTutor>
-        </View>
-    )
-}
+export default TelaTipoUsuario;

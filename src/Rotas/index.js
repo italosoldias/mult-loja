@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import{View,ActivityIndicator} from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AutenticacaoContexto from '../Contexts/contextoAutenticacao';
-
+import MyDrawer from "../Componente/Global/MenuLateral/itens/index.js";
 import RotaApp from "./rotasApp.js";
 import RotaAutenticacao from "./rotasAutorizacao.js";
 
@@ -18,9 +18,15 @@ export default function Rotas(){
     //         </View>
     //     )
     // }
-
+    
     if(logado == true){
-        return(<RotaApp/>)
+        return(
+            
+            <MyDrawer >
+        <RotaApp/>
+
+            </MyDrawer>
+        )
     }else {
         return(<RotaAutenticacao/>)
     } ;

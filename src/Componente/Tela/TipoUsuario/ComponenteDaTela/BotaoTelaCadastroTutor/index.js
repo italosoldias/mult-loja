@@ -3,18 +3,16 @@ import { StyleSheet, Text, View, TextInput, Button, Pressable} from 'react-nativ
 import staleTelaLogin from '../../../Login/styles.js';
 import staleTelaTipoUsuario from '../../styles.js'
 import { NavigationContainer , useNavigation} from '@react-navigation/native';
-
+import BotaoPadrao from '../../../../Global/BotaoPadrao/index.js'
 export default function BotaoTelaCadastroAnimal() {
     const navegation = useNavigation()
-    function renderTelaEstoque (){
+    function renderTelaCadastrarTutor (){
         navegation.navigate('TelaCadastrarTutor')
     }
 
     return (
-    <Pressable style={staleTelaTipoUsuario.sTelaTipoUsuarioBotao}
-    onPress={()=> {renderTelaEstoque()}}
-    >
-        <Text style={staleTelaTipoUsuario.sTelaTipoUsuarioTextoBotao}> CADASTRAR TUTOR </Text>
-    </Pressable>
+        <BotaoPadrao texto={"Cadastrar Tutor"} roda={renderTelaCadastrarTutor}/>
+    
+   
         )
 }

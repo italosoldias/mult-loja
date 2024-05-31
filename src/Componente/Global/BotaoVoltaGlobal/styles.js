@@ -6,8 +6,8 @@ const {height,width} = Dimensions.get('window')
  const  sBotaoGlobal = StyleSheet.create({
 
     sBotaoGlobalView:{
-        paddingTop:45,
-       
+        marginTop:40,
+        margin:"1%",
         position:"absolute",
         left:15,
         
@@ -17,8 +17,9 @@ const {height,width} = Dimensions.get('window')
         justifyContent:"space-around",
         alignItems:"center",
         backgroundColor :'#706B6B',
-        width:45,
-        height:45,
+        width:width* 0.18 / 1,
+        
+        height: height* 0.18 / 1,
     }, 
     sBotaoGlobalIcone:{
         

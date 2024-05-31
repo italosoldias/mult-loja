@@ -3,18 +3,20 @@ import { StyleSheet, Text, View, TextInput, Button,SafeAreaView, Pressable} from
 //import { SafeAreaView } from "react-native-web";
 import CadastrarTutor from './ComponenteDaTela/CadastroTutor/index.js'
 import BotaoVoltaGlobal from '../../Global/BotaoVoltaGlobal/index'
+import TituloDaTela from '../../Global/TituloDaTela/index.js'
 
 import staleTelaCadastraTutor from "./styles.js";
+import sFundoGlobal from "../../Global/FundoGlobal/styles.js";
 
 // style={staleTelaLogin.sTelaLoginBotao}
 export default function TelaCadastrarTutor() {
     return (
         
         
-        <View style={staleTelaCadastraTutor.staleTelaCadastraTutorContainer}>
+        <View style={sFundoGlobal.sBackColor} >
                
-                <Text style={staleTelaCadastraTutor.staleTelaCadastraTutorTexto}> INFORME OS DADOS DO TUTOR</Text> 
-                <BotaoVoltaGlobal/>
+                <TituloDaTela texto={"INFORME OS DADOS DO TUTOR"}></TituloDaTela> 
+                {/* <BotaoVoltaGlobal/> */}
               <CadastrarTutor/>
         </View>
 

@@ -6,9 +6,9 @@ const {height,width} = Dimensions.get('window')
  const  staleTelaTipoUsuario = StyleSheet.create({
     
     sTelaTipoUsuarioContainer:{
-        paddingTop: 50,
-        alignItems: "center",
         
+        alignItems: "center",
+        height:  height ,
         // backgroundColor:"#4E4B4B",
        // 4E4B4B",
         

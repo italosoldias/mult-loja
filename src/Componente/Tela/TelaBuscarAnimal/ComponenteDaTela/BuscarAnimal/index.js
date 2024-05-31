@@ -2,6 +2,9 @@ import React, {  useState , useEffect, useContext} from 'react';
 import { StyleSheet,Text, View, TextInput, Button,Dimensions,Pressable, SafeAreaView } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Picker} from '@react-native-picker/picker'
+
+import BotaoPadrao from '../../../../Global/BotaoPadrao/index.js'
+import CampoPadrao from "../../../../Global/CampoPadrao/index.js";
 import api,{ getAnimal } from '../../../../../services/Api';
 import staleTelaBuscaAnimal from '../../styles';
 
@@ -49,17 +52,17 @@ async function buscarAnimalApi(){
 
 
     return (
-        <SafeAreaView style={staleTelaBuscaAnimal.sTelaBuscaAnimalContainer}>
+        <>
             <Picker style={staleTelaBuscaAnimal.sTelaBuscaAnimalComboBox} selectedValue={selectedValue}
       onValueChange={(value) => setSelectedValue(value)}
-    >
+      >
       <Picker.Item   label="Identificador do Animal" value="idAnimal" />
       <Picker.Item  label="CPF do Tutor" value="idTutor" />
       <Picker.Item  label="Nome do Animal" value="nomeAnimal" />
             </Picker>
             
             { selectedValue === "idAnimal" &&
-                <TextInput 
+                <CampoPadrao 
                 style={staleTelaBuscaAnimal.sTelaBuscaAnimalCampos}
                 onChangeText={setIdAnimalEscrito}
                 value={idAnimalEscrito=== null ? '' :idAnimalEscrito}
@@ -68,7 +71,7 @@ async function buscarAnimalApi(){
                 />
             }
             {selectedValue === "idTutor" &&
-                <TextInput 
+                <CampoPadrao 
                 style={staleTelaBuscaAnimal.sTelaBuscaAnimalCampos}
                 onChangeText={setITutorEscrito}
                 value={idTutorEscrito=== null ? '' :idTutorEscrito}
@@ -77,7 +80,7 @@ async function buscarAnimalApi(){
                 />
             }
              { selectedValue === "nomeAnimal" &&
-               <TextInput 
+               <CampoPadrao 
                style={staleTelaBuscaAnimal.sTelaBuscaAnimalCampos}
                onChangeText={setNomeAnimalEscrito}
                value={idAnimalEscrito=== null ? '' :idAnimalEscrito}
@@ -88,16 +91,9 @@ async function buscarAnimalApi(){
             
 
            
-            
-            <Pressable 
-                style={staleTelaBuscaAnimal.sTelaBuscaAnimalBotao} 
-                
-                onPress={()=>{buscarAnimalApi()}}
-            >
-                <Text 
-                    style={staleTelaBuscaAnimal.sTelaBuscaAnimalTextoBotao}>BUSCAR
-                </Text>
-            </Pressable>
-        </SafeAreaView>
+            <BotaoPadrao  texto={"Buscar"} roda={buscarAnimalApi}/>
+           
+        
+    </>
     )
 }

@@ -15,7 +15,7 @@ export default function RotaAutenticacao () {
   }}>
         <AutorizacaoStack.Screen
               options={{
-                contentStyle :{backgroundColor : "#6B8E23"}
+                contentStyle :{backgroundColor : "#264653"}
                 
             }}
            

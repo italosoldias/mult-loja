@@ -1,8 +1,15 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button, Pressable} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable} from 'react-native';
 import TelaLogin from "../../../Login/index.js";
 import staleTelaTipoUsuario from '../../styles.js'
-
+import BotaoPadrao from '../../../../Global/BotaoPadrao/index.js'
+import {
+  
+  ButtonText,
+  ButtonIcon,
+  ButtonSpinner,
+  ButtonGroup,
+} from "@gluestack-ui/themed"
 import { useNavigation} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -23,14 +30,12 @@ export default function BotaoTelaVenda( props) {
     return (
     
     
+        <BotaoPadrao texto={"Buscar Animal"} roda={renderTelaBuscarAnimal}
+>
+  
+  
+</BotaoPadrao>
     
-    <Pressable 
-        style={staleTelaTipoUsuario.sTelaTipoUsuarioBotao}
-        onPress={  () => {renderTelaBuscarAnimal()}      }
-        > 
-           
-        <Text style={staleTelaTipoUsuario.sTelaTipoUsuarioTextoBotao}> BUSCAR ANIMAL </Text>
-    </Pressable>
         
         )
 }

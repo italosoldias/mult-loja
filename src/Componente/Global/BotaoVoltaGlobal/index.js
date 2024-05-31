@@ -18,7 +18,7 @@ export default function BotaoVoltaGlobal (){
         <Pressable 
             onPress={()=>{voltarTela()}}
             style={sBotaoGlobal.sBotaoGlobalBotao}>
-        <Icone style={sBotaoGlobal.sBotaoGlobalIcone} name='keyboard-backspace' />
+        
         </Pressable>
         </View>
     )
