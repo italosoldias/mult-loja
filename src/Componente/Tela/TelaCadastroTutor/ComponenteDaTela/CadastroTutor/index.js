@@ -12,7 +12,7 @@ export default function CadastrarTutor() {
     const [emailEscrito, setEmailEscrito] = useState(null)
 
 
-    async function cadastrarAnnimalApi() {
+    async function cadastrarTutorApi() {
         const campoNomeTutorEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(nomeTutorEscrito)
         const campoEmailEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(emailEscrito)
         const campoIdTutorEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(idTutorEscrito)
@@ -101,7 +101,7 @@ export default function CadastrarTutor() {
 
             <BotaoPadrao
                 texto={"CADASTRAR"}
-                roda={cadastrarAnnimalApi}
+                roda={cadastrarTutorApi}
             >
 
             </BotaoPadrao>
