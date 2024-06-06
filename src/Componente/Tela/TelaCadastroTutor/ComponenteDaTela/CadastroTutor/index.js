@@ -16,7 +16,7 @@ export default function CadastrarTutor() {
         const campoNomeTutorEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(nomeTutorEscrito)
         const campoEmailEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(emailEscrito)
         const campoIdTutorEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(idTutorEscrito)
-       
+
         if (idTutorEscrito != null
             && nomeTutorEscrito != null
             && emailEscrito != null
@@ -24,8 +24,8 @@ export default function CadastrarTutor() {
             && campoNomeTutorEscritoCorreto == false
             && campoIdTutorEscritoCorreto == false) {
 
-           
-            
+
+
             if (validaCPF(idTutorEscrito) == true) {
 
                 try {
@@ -44,10 +44,21 @@ export default function CadastrarTutor() {
                     setNomeTutorEscrito(null)
                     Alert.alert("Tutor cadastrado com sucesso")
                 } catch (error) {
-                    setEmailEscrito("")
-                    setIdTutorEscrito("")
-                    setNomeTutorEscrito("")
-                    Alert.alert("Houve um problema no cadastro do tutor")
+                    
+
+                    if (error.response.status == 402) {
+                        setEmailEscrito("")
+                        setIdTutorEscrito("")
+                        setNomeTutorEscrito("")
+                        Alert.alert("Esse tutor ja esta cadastrado")
+                    } else {
+                        setEmailEscrito("")
+                        setIdTutorEscrito("")
+                        setNomeTutorEscrito("")
+                        Alert.alert("Houve um problema no cadastro do tutor")
+                    }
+
+                   
                 }
             } else {
                 setEmailEscrito(null)
