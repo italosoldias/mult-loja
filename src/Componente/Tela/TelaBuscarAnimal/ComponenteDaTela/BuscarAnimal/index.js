@@ -138,39 +138,10 @@ export default function BuscarAnimal() {
 
 
 
-      {/* <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>Nome do animal: <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}> {resposta.nomeAnimal}</Text></Text>
-            
-            <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>Identificador do Animal: {resposta.idAnimal}</Text>
-            <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>CPF do Tutor: {resposta.idTutor}</Text>
-            <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>"Raça do Aninimal:": {resposta.raca}</Text>
-            <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>"Peso do Animal:": {resposta.peso}</Text>
-            <Text style={staleTelaAnimalRetornado.sTelaAnimalRetornadoTextoDadosAnimal}>"Especie do Animal:" :{resposta.especie}</Text> */}
+      
       <ModalTelaBuscarAnimal showModal={modalHabilitado} animal={resposta} imagem={imagem}>
       </ModalTelaBuscarAnimal>
 
     </>
   )
 }
-const styles = StyleSheet.create({
-  modalContainer: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark overlay color with 70% opacity
-    padding: 20,
-  },
-  modalContent: {
-    backgroundColor: '#fff', // White content background
-    padding: 20,
-    borderRadius: 10,
-    shadowColor: '#000',
-    display: "flex",
-    flexDirection: "column",
-    flex: 2,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-});
