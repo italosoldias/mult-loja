@@ -52,7 +52,7 @@ const {height,width} = Dimensions.get('window')
     },
     sTelaBuscaAnimalComboBox:{
         height:height* 0.041 / 1 ,
-        width: width * 0.90 / 1,
+        width: "95%",
         backgroundColor:"#DCDCDC"
     }
 })

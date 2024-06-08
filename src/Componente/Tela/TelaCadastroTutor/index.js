@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button,SafeAreaView, Pressable} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, Pressable } from 'react-native';
 //import { SafeAreaView } from "react-native-web";
 import CadastrarTutor from './ComponenteDaTela/CadastroTutor/index.js'
 import BotaoVoltaGlobal from '../../Global/BotaoVoltaGlobal/index'
@@ -10,16 +10,17 @@ import sFundoGlobal from "../../Global/FundoGlobal/styles.js";
 
 // style={staleTelaLogin.sTelaLoginBotao}
 export default function TelaCadastrarTutor() {
-    return (
-        
-        
-        <View style={sFundoGlobal.sBackColor} >
-               
-                <TituloDaTela texto={"INFORME OS DADOS DO TUTOR"}></TituloDaTela> 
-                {/* <BotaoVoltaGlobal/> */}
-              <CadastrarTutor/>
-        </View>
+  return (
 
-        
-        )
+    <>
+      <TituloDaTela texto={"INFORME OS DADOS DO TUTOR"}></TituloDaTela>
+      <View style={sFundoGlobal.sBackColor} >
+
+        {/* <BotaoVoltaGlobal/> */}
+        <CadastrarTutor />
+      </View>
+    </>
+
+
+  )
 }

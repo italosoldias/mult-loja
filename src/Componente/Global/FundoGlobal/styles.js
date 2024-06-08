@@ -9,10 +9,14 @@ const {height,width} = Dimensions.get('window')
     sBackColor : {
        flex:1,
        alignItems: "center",
-        backgroundColor:"#264653",
-        
+        backgroundColor:"#D6FFDC",
+        justifyContent:"center",
+        position:"relative"
+       
+    },
+    sGlobalCentralise:{
+      
     }
-
  })
 
  

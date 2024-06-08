@@ -3,12 +3,12 @@ import {StyleSheet ,Dimensions, Animated} from 'react-native';
 
 
 const {height,width} = Dimensions.get('window')
- const  staleTelaLogin = StyleSheet.create({
+ const  sCampoPadrao = StyleSheet.create({
     
    
-    sTelaLogincampos: {
+    sCampoPadraoCampo: {
         
-        width:  width * 0.95 / 1,
+        width:  "95%",
         height: height* 0.06 / 1,
         margin:5,
         padding: 2,
@@ -23,4 +23,4 @@ const {height,width} = Dimensions.get('window')
     
 })
 
-export default staleTelaLogin
+export default sCampoPadrao
