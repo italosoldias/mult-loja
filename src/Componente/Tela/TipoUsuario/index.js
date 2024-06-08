@@ -5,20 +5,21 @@ import sFundoGlobal from "../../Global/FundoGlobal/styles.js";
 
 const TelaTipoUsuario = ({ name, photoUrl }) => {
   return (
-    <View style={sFundoGlobal.sBackColor}>
+    <>
       {/* Round Avatar */}
       <View style={styles.avatarContainer}>
         <Image
           source={{ uri: "C:/dev/mult-loja/assets/icon.png" }}
           style={styles.avatarImage}
-        />
+          />
       </View>
 
       <View style={styles.userNameContainer}>
         <Text style={styles.userName}>nomezinho</Text>
       </View>
      
-    </View>
+          </>
+  
    
   );
 };

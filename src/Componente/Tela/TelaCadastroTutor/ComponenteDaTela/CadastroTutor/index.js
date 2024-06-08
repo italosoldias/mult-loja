@@ -16,7 +16,7 @@ export default function CadastrarTutor() {
         const campoNomeTutorEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(nomeTutorEscrito)
         const campoEmailEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(emailEscrito)
         const campoIdTutorEscritoCorreto = temEspacosEmBrancoExcessoOuVazio(idTutorEscrito)
-
+        
         if (idTutorEscrito != null
             && nomeTutorEscrito != null
             && emailEscrito != null

@@ -55,24 +55,24 @@ function ok(){
 
     return(
        
-         <View style={staleTelaLogin.sTelaLogincontainer}>
+         
 
-        <View  >
+        <>
             <CampoPadrao
-                style={staleTelaLogin.sTelaLogincampos}
-                onChangeText={setEmail}
-                value={email=== null ? '' :email}
-                placeholder='INFORME SEU E-MAIL'
-                inputMode='email-address'
-                />
+               
+               onChangeText={setEmail}
+               value={email=== null ? '' :email}
+               placeholder='INFORME SEU E-MAIL'
+               inputMode='email-address'
+               />
             <CampoPadrao
-                style={staleTelaLogin.sTelaLogincampos}
+                
                 onChangeText={setSenha}
                 value={senha=== null ? '' :senha}
                 placeholder='DIGITE SUA SENHA'
                 secureTextEntry= {true}
                 />
-            </View>
+           
             <BotaoPadrao  texto={"Confirmar"} roda={validaDados}/>
         
     
@@ -81,8 +81,9 @@ function ok(){
             
              
              <ResultadoLogin mensagemResultado={mensagem} />
+                </>
            
-</View>
+
            
     )
 }

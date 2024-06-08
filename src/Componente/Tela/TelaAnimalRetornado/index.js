@@ -8,7 +8,7 @@ import BotaoVoltaGlobal from '../../Global/BotaoVoltaGlobal/index'
 import staleTelaAnimalRetornado from "./styles.js";
 
 // style={staleTelaLogin.sTelaLoginBotao}
-export default function TelaAnimalRetornado() {
+function TelaAnimalRetornado() {
     return (
         
         
@@ -21,3 +21,5 @@ export default function TelaAnimalRetornado() {
         
         )
 }
+
+export default TelaAnimalRetornado

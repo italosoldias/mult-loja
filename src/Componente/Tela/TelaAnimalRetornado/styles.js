@@ -21,7 +21,7 @@ const  staleTelaAnimalRetornado= StyleSheet.create({
         backgroundColor: "#F8F8FF",
         paddingTop: 5,
         width: width * 0.80 / 1,
-        alignItems: "flex-start",
+        position:"absolute",
     },
     sTelaAnimalRetornadoContainer:{
         paddingTop: 50,

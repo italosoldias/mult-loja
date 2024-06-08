@@ -6,20 +6,23 @@ import TelaBuscarProduto from "../Componente/Tela/TelaBuscarProduto"
 import TelaBuscarAnimal from "../Componente/Tela/TelaBuscarAnimal"
 import TelaCadastrarAnimal from '../Componente/Tela/TelaCadastrarAnimal'
 import TelaCadastrarTutor from '../Componente/Tela/TelaCadastroTutor'
-import TelaAnimalRetornado from '../Componente/Tela/TelaAnimalRetornado'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import TelaAnimalRetornado from '../Componente/Tela/TelaAnimalRetornado/index.js'
+import MenuLateral from "../Componente/Global/MenuLateral/itens/index.js";
+import { createNativeStackNavigator , } from '@react-navigation/native-stack';
 
 const AppStack = createNativeStackNavigator()
 
 const RotaApp = () => (
+
+
     <AppStack.Navigator  >
         <AppStack.Screen 
             // options={{
             //     contentStyle :{backgroundColor : "#4E4B4B"}
             // }}
-            name="TelaTipoUsuario"  component={TelaTipoUsuario}
+            name="MenuLateral"  component={MenuLateral}
             />
-        <AppStack.Screen
+        {/* <AppStack.Screen
             name="TelaUsuarioVendedor" component={TelaUsuarioVendedor}
             />   
         <AppStack.Screen 
@@ -37,9 +40,10 @@ const RotaApp = () => (
         <AppStack.Screen
             name="TelaCadastrarTutor" component={TelaCadastrarTutor}
         />
-        <AppStack.Screen
-            name="TelaAnimalRetornado" component={TelaAnimalRetornado}
-        />
+    */}
+    <AppStack.Screen
+        name="TelaAnimalRetornado" component={TelaAnimalRetornado}
+    />
     </AppStack.Navigator>
 );
 

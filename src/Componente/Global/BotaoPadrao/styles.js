@@ -7,16 +7,14 @@ const {height,width} = Dimensions.get('window')
 
     sBotaoPadraoView:{
         width:"100%",
-       
-       
         left:15,
         
-      
     },
     sBotaoPadraoBotao : {
         justifyContent:"space-around",
         alignItems:"center",
-        backgroundColor :'#0f766e',
+        backgroundColor :'#4E1B96',
+        // backgroundColor :'#0f766e',
         borderWidth: 1,
         borderColor:"#2563eb",
         borderRadius:50,

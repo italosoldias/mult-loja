@@ -15,7 +15,7 @@ const {height,width} = Dimensions.get('window')
     },
     sTelaCadastraAnimalCampos: {
         
-        width:  width * 0.95 / 1,
+        width:  20,
         margin:5,
         padding: 2,
         paddingLeft:10,
@@ -27,7 +27,6 @@ const {height,width} = Dimensions.get('window')
     },
     sTelaCadastraAnimalBotao:{
         alignItems: "center",
-        
         marginBottom:10,
         height: 35,
         width: width * 0.90 / 1,

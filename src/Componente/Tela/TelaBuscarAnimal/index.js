@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button,SafeAreaView, Pressable} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, Pressable } from 'react-native';
 //import { SafeAreaView } from "react-native-web";
 
 import BotaoPadrao from '../../Global/BotaoPadrao/index.js'
@@ -9,19 +9,23 @@ import TituloDaTela from "../../Global/TituloDaTela/index.js";
 
 import staleTelaBuscaAnimal from "./styles.js";
 import sFundoGlobal from "../../Global/FundoGlobal/styles.js";
-
+import { ModalProvedor} from "../../../Contexts/contextoAnimal.js"
 // style={staleTelaLogin.sTelaLoginBotao}
 export default function TelaBuscarAnimal() {
-    return (
-        
-        
-        <View style={sFundoGlobal.sBackColor}>
-                
-                <TituloDaTela texto={"BUSQUE O ANIMAL DESEJADO"}> </TituloDaTela> 
-                {/* <BotaoVoltaGlobal/> */}
-              <BuscarAnimal/>
-        </View>
+  return (
 
-        
-        )
+    <ModalProvedor>
+
+    <>
+      <TituloDaTela texto={"BUSQUE O ANIMAL DESEJADO"}> </TituloDaTela>
+
+      <View style={sFundoGlobal.sBackColor}>
+        {/* <BotaoVoltaGlobal/> */}
+        <BuscarAnimal />
+      </View>
+    </>
+    </ModalProvedor>
+
+
+  )
 }
