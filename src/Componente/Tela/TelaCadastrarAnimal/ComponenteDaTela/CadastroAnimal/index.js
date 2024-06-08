@@ -23,20 +23,25 @@ export default function CadastrarAnimal(){
         quality: 1,
         base64: true
       });
+      
       setImagemSalva(result)
 }
 
 async function cadastrarAnnimalApi(){
     
+   
     
-    console.log(imagenSalva)
 
     if(idTutorEscrito != null && idTutorEscrito.length != 0){
         console.log('nao sou null')
+        const stringImagem = `data:${imagenSalva.assets[0].mimeType};base64,${imagenSalva.assets[0].base64}`
+        console.log(imagenSalva)
         console.log(idTutorEscrito)
 
-   
-     const  resp = await 
+        
+
+    try {
+        const  resp = await 
      postCadastrarAnimal(
         {"idTutor" :idTutorEscrito,
          "idAnimal" : idAnimalEscrito,
@@ -44,10 +49,14 @@ async function cadastrarAnnimalApi(){
          "peso": new Number (pesoEscrito),
          "especie": especieEscrita,
          "raca": racaEscrita, 
-         "imagem": imagenSalva.assets[0].uri
+         "imagem": stringImagem
 
          } )
-        console.log(resp)
+    } catch (error) {
+        console.log(error)
+    }
+     
+        
 
     //    // setIdTutorEscrito(null)
     } else { 
