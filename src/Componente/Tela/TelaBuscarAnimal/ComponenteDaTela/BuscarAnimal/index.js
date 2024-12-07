@@ -21,6 +21,7 @@ export default function BuscarAnimal() {
   const [nomeAnimalEscrito, setNomeAnimalEscrito] = useState(null)
   const [resposta, setResposta] = useState('')
   const [imagem, setImagem] = useState("")
+  const [pdfs, setPdfs] = useState("")
   const [showModal, setShowModal] = useState(false);
 
   const nav = useNavigation()
@@ -40,7 +41,7 @@ export default function BuscarAnimal() {
 
       const resp = await getAnimal({ idAnimal: idAnimalEscrito })
       console.log("====================***************")
-      console.log(resp)
+    
       const respTratada = {
         "Nome do animal:": resp.nomeAnimal,
         "Identificador do Animal:": resp.idAnimal,
@@ -51,6 +52,7 @@ export default function BuscarAnimal() {
       }
       setResposta(respTratada)
       setImagem(resp.imagem)
+      setPdfs(resp.anexos)
       mudaModal()
 
 
@@ -66,6 +68,7 @@ export default function BuscarAnimal() {
         "Peso do Animal:": resp.peso,
         "Especie do Animal:": resp.especie
       }
+      
       setResposta(respTratada)
       setImagem(resp.imagem)
       mudaModal()
@@ -139,7 +142,7 @@ export default function BuscarAnimal() {
 
 
       
-      <ModalTelaBuscarAnimal showModal={modalHabilitado} animal={resposta} imagem={imagem}>
+      <ModalTelaBuscarAnimal showModal={modalHabilitado} animal={resposta} anexos={pdfs} imagem={imagem}>
       </ModalTelaBuscarAnimal>
 
     </>

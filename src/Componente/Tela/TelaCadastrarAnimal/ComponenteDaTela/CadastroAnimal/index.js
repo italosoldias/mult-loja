@@ -1,9 +1,13 @@
 import React, {  useState , useContext} from 'react';
 import { StyleSheet, Text, View, TextInput, Button,Dimensions,Pressable, SafeAreaView } from 'react-native';
 import api,{ postCadastrarAnimal } from '../../../../../services/Api';
+
+
 import staleTelaCadastraAnimal from '../../styles.js'
+import { useDocumentContext } from "../../../../../Contexts/contextoDocumento.js"
 import BotaoPadrao from "../../../../Global/BotaoPadrao/index.js";
 import CampoPadrao from "../../../../Global/CampoPadrao/index.js";
+import EnviarPDFButton from "../../../../Global/util/upload/upload.js"
 import * as ImagePicker from 'expo-image-picker';
 export default function CadastrarAnimal(){
 
@@ -14,6 +18,7 @@ export default function CadastrarAnimal(){
  const [racaEscrita, setRacaEscrita] = useState(null)
  const [especieEscrita, setEspecieEscrita] = useState(null)
  const [imagenSalva, setImagemSalva]= useState(null)
+ const { documentData ,handlePDFSelection } = useDocumentContext();
  
  const  imagem = async () =>{
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -49,7 +54,8 @@ async function cadastrarAnnimalApi(){
          "peso": new Number (pesoEscrito),
          "especie": especieEscrita,
          "raca": racaEscrita, 
-         "imagem": stringImagem
+         "imagem": stringImagem,
+         "anexos": [documentData]
 
          } )
     } catch (error) {
@@ -111,6 +117,10 @@ async function cadastrarAnnimalApi(){
                 inputMode='decimal'
                 placeholder='INFORME O PESO DO ANIMAL'
             />
+           <BotaoPadrao 
+                texto={"Enviar Exames"}
+                roda={handlePDFSelection}
+            ></BotaoPadrao>
             <BotaoPadrao 
                 texto={"Enviar Imagem"}
                 roda={imagem}

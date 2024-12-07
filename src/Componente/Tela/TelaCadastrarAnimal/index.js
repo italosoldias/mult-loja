@@ -2,9 +2,8 @@ import React from "react";
 import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, Pressable, ScrollView } from 'react-native';
 import BotaoVoltaGlobal from '../../Global/BotaoVoltaGlobal/index'
 //import { SafeAreaView } from "react-native-web";
-
+import { DocumentProvider } from "../../../Contexts/contextoDocumento.js";
 import TituloDaTela from "../../Global/TituloDaTela/index.js";
-
 import CadastrarAnimal from './ComponenteDaTela/CadastroAnimal/index.js'
 
 import staleTelaCadastraAnimal from "./styles.js";
@@ -13,7 +12,9 @@ import sFundoGlobal from "../../Global/FundoGlobal/styles";
 // style={staleTelaLogin.sTelaLoginBotao}
 export default function TelaCadastrarAnimal() {
   return (
-    <>
+    
+    
+    <DocumentProvider>
       <TituloDaTela texto={"INFORME OS DADOS DO ANIMAL"} > </TituloDaTela>
 
       <ScrollView style={{ backgroundColor: "#D6FFDC" }}>
@@ -24,7 +25,8 @@ export default function TelaCadastrarAnimal() {
           <CadastrarAnimal />
         </View>
       </ScrollView>
-    </>
+   
+      </DocumentProvider>
 
 
   )

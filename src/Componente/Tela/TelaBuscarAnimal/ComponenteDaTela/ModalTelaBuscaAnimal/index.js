@@ -1,19 +1,17 @@
-import react, { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { ModalContexto } from "@/src/Contexts/contextoAnimal";
 import { StyleSheet, Text, Modal, Image, View, TextInput, Button, Dimensions, Pressable, SafeAreaView, Alert } from 'react-native';
-
-export default function ModalTelaBuscaAnimal({ animal, imagem }) {
+import PDFCarousel from '../pdfCarroceu/index.js';
+export default function ModalTelaBuscaAnimal({ animal, anexos, imagem }) {
 
     const { modalHabilitado, mudaModal } = useContext(ModalContexto)
 
-
-
+   
+    
 
 
     return (
-
         <Modal visible={modalHabilitado}>
-
             <View style={styles.modalContainer}>
                 <View style={styles.modalContent}>
                 {imagem != undefined ?
@@ -31,32 +29,27 @@ export default function ModalTelaBuscaAnimal({ animal, imagem }) {
                                 <Text style={styles.dataValue}>{value}</Text>
                             </View>
                         ))}
-                        
+                        <PDFCarousel pdfs={anexos} ></PDFCarousel>
                     </View>
 
                     <Button title="Close Modal" onPress={mudaModal} />
-
                 </View>
-
             </View>
-
         </Modal>
-    )
+    );
 }
+
 const styles = StyleSheet.create({
     container: {
-
         flex: 1,
         padding: 2,
     },
     dataRow: {
-
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 10,
     },
     dataLabel: {
-
         fontWeight: 'bold',
         marginRight: 10,
         fontSize: 16
@@ -66,13 +59,12 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     modalContainer: {
-
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark overlay color with 70% opacity
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         padding: 20,
     },
     modalContent: {
-        backgroundColor: '#fff', // White content background
+        backgroundColor: '#fff',
         padding: 20,
         borderRadius: 10,
         shadowColor: '#000',
@@ -88,12 +80,33 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     imageContainer: {
-        alignItems: 'center', // Center image horizontally
+        alignItems: 'center',
         justifyContent: 'center',
-      },
-      image: {
+    },
+    image: {
         width: 200,
         height: 200,
-      },
+    },
+    pdfContainer: {
+        marginTop: 20,
+        alignItems: 'center',
+    },
+    pdfText: {
+        fontSize: 16,
+        color: 'blue',
+        marginBottom: 10,
+    },
+    pdfItem: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'lightgray',
+        borderWidth: 1,
+        borderColor: 'gray',
+        margin: 10,
+        borderRadius: 5,
+    },
+    swiper: {
+        height: 200,
+    }
 });
-

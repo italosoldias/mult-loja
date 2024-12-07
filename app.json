@@ -1,5 +1,6 @@
 {
   "expo": {
+    "newArchEnabled": true,
     "name": "veteroamosapp",
     "slug": "veteroamosapp",
     "version": "1.0.0",
