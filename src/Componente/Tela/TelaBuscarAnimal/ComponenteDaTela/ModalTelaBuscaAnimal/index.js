@@ -1,27 +1,25 @@
 import React, { useState, useContext } from "react";
 import { ModalContexto } from "@/src/Contexts/contextoAnimal";
-import { StyleSheet, Text, Modal, Image, View, TextInput, Button, Dimensions, Pressable, SafeAreaView, Alert } from 'react-native';
+import { StyleSheet, Text, Modal, Image, View, Button } from 'react-native';
 import PDFCarousel from '../pdfCarroceu/index.js';
+
 export default function ModalTelaBuscaAnimal({ animal, anexos, imagem }) {
-
-    const { modalHabilitado, mudaModal } = useContext(ModalContexto)
-
-   
-    
-
+    const { modalHabilitado, mudaModal } = useContext(ModalContexto);
 
     return (
         <Modal visible={modalHabilitado}>
             <View style={styles.modalContainer}>
                 <View style={styles.modalContent}>
-                {imagem != undefined ?
-                            <View style={styles.imageContainer}>
-                                <Image
-                                    source={{ uri: imagem, base64: true }}
-                                    style={styles.image}
-                                /></View>
-                            : <Text >SEM IMAGEM </Text>
-                        }
+                    {imagem != undefined ? (
+                        <View style={styles.imageContainer}>
+                            <Image
+                                source={{ uri: imagem, base64: true }}
+                                style={styles.image}
+                            />
+                        </View>
+                    ) : (
+                        <Text>SEM IMAGEM</Text> // Corrigido: texto dentro de <Text>
+                    )}
                     <View style={styles.container}>
                         {Object.entries(animal).map(([key, value]) => (
                             <View style={styles.dataRow} key={key}>
@@ -29,7 +27,7 @@ export default function ModalTelaBuscaAnimal({ animal, anexos, imagem }) {
                                 <Text style={styles.dataValue}>{value}</Text>
                             </View>
                         ))}
-                        <PDFCarousel pdfs={anexos} ></PDFCarousel>
+                        <PDFCarousel pdfs={anexos} />
                     </View>
 
                     <Button title="Close Modal" onPress={mudaModal} />

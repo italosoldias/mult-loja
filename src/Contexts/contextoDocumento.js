@@ -20,7 +20,7 @@ export const DocumentProvider = ({ children }) => {
               const content = await getFileBase64(file.assets[0].uri);
               setDocumentData(content);
               console.log('Base64 do documento:', content);
-              console.log('Arquivo selecionado:', file.assets[0].uri);
+              // console.log('Arquivo selecionado:', file.assets[0].uri);
             } else {
               console.error('URI do arquivo é inválido.');
             }
